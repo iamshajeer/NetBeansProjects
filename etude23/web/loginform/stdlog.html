@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Mca Login</title>
+        <link rel="stylesheet" href="styleforlogin.css" type="text/css" /> 
+    </head>
+
+    <body onload="t1.focus()">
+        <form action="" method="post">
+            <table width="483" border="0"cellpadding="10" cellspacing="3" id="logintable">
+                <tr><td></td><th align="left">
+                        LOGIN FOR USER
+                    </th>
+                </tr>
+                <tr>
+                    <td width="140">
+                        User ID:
+                    </td>
+                    <td width="294">
+                        <input type="text" id="t1" class="text"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Department:</td>
+                    <td>
+                        <select class="text">
+                            <option value="mca">MCA</option>
+                            <option value="mba">MBA</option>
+                            <option value="biotech">Biotechnology</option>
+                            <option value="btech">B-tech</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Date of Birth:</td>
+                    <td>
+                        <input type="date" class="text" id="date"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td> 
+
+                        <input name="submit" type="submit" onclick="change()" class="submit" id="submit" value="Submit" />
+
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+    <script>
+        function change(){
+            window.open("../user.html");
+            
+        }
+
+    </script>
+</html>

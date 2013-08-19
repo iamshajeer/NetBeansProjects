@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2013 11:18:19 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ent.Reg" table="reg" catalog="ent">
+        <id name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+            <generator class="identity" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="50" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="50" />
+        </property>
+        <property name="religion" type="string">
+            <column name="religion" length="50" />
+        </property>
+        <property name="dob" type="string">
+            <column name="dob" length="25" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="age" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex" length="20" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="40" />
+        </property>
+        <property name="district" type="string">
+            <column name="district" length="40" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="90" />
+        </property>
+        <property name="guardian" type="string">
+            <column name="guardian" length="45" />
+        </property>
+        <property name="mob" type="string">
+            <column name="mob" length="15" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

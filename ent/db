@@ -1,0 +1,209 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.1.40-community
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema ent
+--
+
+CREATE DATABASE IF NOT EXISTS ent;
+USE ent;
+
+--
+-- Definition of table `blood_test`
+--
+
+DROP TABLE IF EXISTS `blood_test`;
+CREATE TABLE `blood_test` (
+  `si_no` int(11) NOT NULL AUTO_INCREMENT,
+  `regid` varchar(20) DEFAULT NULL,
+  `test_date` varchar(20) DEFAULT NULL,
+  `hemoglobin` varchar(30) DEFAULT NULL,
+  `tlc` varchar(20) DEFAULT NULL,
+  `neutrofill` varchar(20) DEFAULT NULL,
+  `lymphocytes` varchar(20) DEFAULT NULL,
+  `monocytes` varchar(20) DEFAULT NULL,
+  `basophils` varchar(20) DEFAULT NULL,
+  `othercount` varchar(20) DEFAULT NULL,
+  `total_rbc` varchar(20) DEFAULT NULL,
+  `platlets` varchar(20) DEFAULT NULL,
+  `blood_group` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`si_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `blood_test`
+--
+
+/*!40000 ALTER TABLE `blood_test` DISABLE KEYS */;
+INSERT INTO `blood_test` (`si_no`,`regid`,`test_date`,`hemoglobin`,`tlc`,`neutrofill`,`lymphocytes`,`monocytes`,`basophils`,`othercount`,`total_rbc`,`platlets`,`blood_group`) VALUES 
+ (1,'120','2013-05-08',NULL,'23','45','67','45','44','2','56','34','a+'),
+ (2,'120','2013-05-09',NULL,'23','78','34','24','243','34','23','56','a+');
+/*!40000 ALTER TABLE `blood_test` ENABLE KEYS */;
+
+
+--
+-- Definition of table `booking`
+--
+
+DROP TABLE IF EXISTS `booking`;
+CREATE TABLE `booking` (
+  `token` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `date` varchar(40) DEFAULT NULL,
+  `time` varchar(40) DEFAULT NULL,
+  `doctor` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`token`)
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `booking`
+--
+
+/*!40000 ALTER TABLE `booking` DISABLE KEYS */;
+INSERT INTO `booking` (`token`,`name`,`date`,`time`,`doctor`) VALUES 
+ (80,'prabeesh','2013-05-17','12','Idicula Mathews'),
+ (81,'prabeesh','2013-05-07','12','Idicula Mathews'),
+ (82,'prabeesh','2013-05-15','23','Sheela A'),
+ (83,'prabeesh','2013-05-14','12','Idicula Mathews'),
+ (87,'reshmi','2013-05-16','4','Idicula Mathews'),
+ (88,'reshmi','2013-05-16','4','Idicula Mathews');
+/*!40000 ALTER TABLE `booking` ENABLE KEYS */;
+
+
+--
+-- Definition of table `doctor_diaganosis`
+--
+
+DROP TABLE IF EXISTS `doctor_diaganosis`;
+CREATE TABLE `doctor_diaganosis` (
+  `si_no` int(11) NOT NULL AUTO_INCREMENT,
+  `reg_id` int(11) DEFAULT NULL,
+  `consult_date` varchar(20) DEFAULT NULL,
+  `remark` varchar(75) DEFAULT NULL,
+  `blood` varchar(20) DEFAULT NULL,
+  `xray` varchar(25) DEFAULT NULL,
+  `scan` varchar(20) DEFAULT NULL,
+  `reconsult_week` varchar(20) DEFAULT NULL,
+  `reconsult_advice_date` varchar(20) DEFAULT NULL,
+  `final_consult` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`si_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `doctor_diaganosis`
+--
+
+/*!40000 ALTER TABLE `doctor_diaganosis` DISABLE KEYS */;
+INSERT INTO `doctor_diaganosis` (`si_no`,`reg_id`,`consult_date`,`remark`,`blood`,`xray`,`scan`,`reconsult_week`,`reconsult_advice_date`,`final_consult`) VALUES 
+ (1,32,'2013-05-07','ok fine','yes','yes','no','next','2013-05-08','2013-05-17');
+/*!40000 ALTER TABLE `doctor_diaganosis` ENABLE KEYS */;
+
+
+--
+-- Definition of table `reg`
+--
+
+DROP TABLE IF EXISTS `reg`;
+CREATE TABLE `reg` (
+  `si_no` int(11) NOT NULL AUTO_INCREMENT,
+  `fname` varchar(50) DEFAULT NULL,
+  `lname` varchar(50) DEFAULT NULL,
+  `religion` varchar(50) DEFAULT NULL,
+  `dob` varchar(25) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `sex` varchar(20) DEFAULT NULL,
+  `state` varchar(40) DEFAULT NULL,
+  `district` varchar(40) DEFAULT NULL,
+  `address` varchar(90) DEFAULT NULL,
+  `guardian` varchar(45) DEFAULT NULL,
+  `mob` varchar(15) DEFAULT NULL,
+  `email` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`si_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=122 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `reg`
+--
+
+/*!40000 ALTER TABLE `reg` DISABLE KEYS */;
+INSERT INTO `reg` (`si_no`,`fname`,`lname`,`religion`,`dob`,`age`,`sex`,`state`,`district`,`address`,`guardian`,`mob`,`email`) VALUES 
+ (121,'dgfdsfggsgfdg','sfsfs','christian','2013-05-08',23,'male','Kerala','alappuzha','fdsgxg','fdsgfsg',NULL,'prabeesh2868@gmail.com');
+/*!40000 ALTER TABLE `reg` ENABLE KEYS */;
+
+
+--
+-- Definition of table `scan_test`
+--
+
+DROP TABLE IF EXISTS `scan_test`;
+CREATE TABLE `scan_test` (
+  `si_no` int(11) NOT NULL AUTO_INCREMENT,
+  `reg_id` varchar(20) DEFAULT NULL,
+  `scan_date` varchar(25) DEFAULT NULL,
+  `scan_name` varchar(30) DEFAULT NULL,
+  `remark1` varchar(30) DEFAULT NULL,
+  `remark2` varchar(30) DEFAULT NULL,
+  `remark3` varchar(30) DEFAULT NULL,
+  PRIMARY KEY (`si_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `scan_test`
+--
+
+/*!40000 ALTER TABLE `scan_test` DISABLE KEYS */;
+INSERT INTO `scan_test` (`si_no`,`reg_id`,`scan_date`,`scan_name`,`remark1`,`remark2`,`remark3`) VALUES 
+ (1,'120','mri','mri',NULL,'hfghfrh','gsgfdgtd');
+/*!40000 ALTER TABLE `scan_test` ENABLE KEYS */;
+
+
+--
+-- Definition of table `xray_test`
+--
+
+DROP TABLE IF EXISTS `xray_test`;
+CREATE TABLE `xray_test` (
+  `si_no` int(11) NOT NULL AUTO_INCREMENT,
+  `reg_id` int(11) DEFAULT NULL,
+  `test_date` varchar(25) DEFAULT NULL,
+  `remark1` varchar(35) DEFAULT NULL,
+  `remark2` varchar(36) DEFAULT NULL,
+  `remark3` varchar(35) DEFAULT NULL,
+  `remark4` varchar(35) DEFAULT NULL,
+  `remark5` varchar(35) DEFAULT NULL,
+  `opinion` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`si_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `xray_test`
+--
+
+/*!40000 ALTER TABLE `xray_test` DISABLE KEYS */;
+INSERT INTO `xray_test` (`si_no`,`reg_id`,`test_date`,`remark1`,`remark2`,`remark3`,`remark4`,`remark5`,`opinion`) VALUES 
+ (1,120,'2013-05-07','fdf','klk','lkml','ml','lkl','mkklk');
+/*!40000 ALTER TABLE `xray_test` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

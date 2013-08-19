@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 5, 2013 12:53:15 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="voting.Party" table="party" catalog="online_voting">
+        <id name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+            <generator class="identity" />
+        </id>
+        <property name="partyId" type="java.lang.Integer">
+            <column name="party_id" />
+        </property>
+        <property name="partyName" type="string">
+            <column name="party_name" length="35" />
+        </property>
+    </class>
+</hibernate-mapping>

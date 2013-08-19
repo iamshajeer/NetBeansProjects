@@ -1,0 +1,17 @@
+
+#outer{
+    border:hidden;
+    border-color:#999;
+
+}
+#outer th{
+    font-family: sans;
+    background-color: #fff;
+    text-shadow: 2px 5px 15px #000;
+}
+
+#col1{
+    background-color: #c6e8c9;
+}
+#col2{background-color: #fff;
+}

@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+#regtab{
+	width:400px;
+	border:none;
+	
+}
+#regtab tr td{
+	border: none;
+	text-align: center;
+	font-weight: bold;
+}
+#register{
+		width:100px;
+		height:25px;
+		}
+#register:hover{
+	cursor:pointer;
+}
+.rcls{
+	width:200px;
+height:25px;
+}
+.crcls{
+	width:200px;
+height:25px;
+}
+.adlog{
+	width: 183px;
+	height: 310px;
+	background-image:url(images/link2.jpg);
+	margin:auto;
+	}
+#adlogleft{
+	float:left;
+	padding:0px;
+	margin-left:auto;
+	margin-top:20px;
+	}
+#main{width:950px;
+	margin: 0 auto;}
+#adlogright{
+		float:right;
+		margin-right:auto;
+		margin-top:20px;
+		}
+#adlogright a
+{
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#adlogleft a
+{
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#adlogleft #creg{
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding:20px;
+	padding-top:50px;
+}
+#adlogleft #creg .reg{
+	text-decoration: none;
+	font-size:20px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+#adlogleft #creg a
+{
+	text-decoration: none;
+	font-size:14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}

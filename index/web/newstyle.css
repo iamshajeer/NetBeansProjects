@@ -1,0 +1,38 @@
+.text{background-color:#FFF9FC;*/
+width:190px;
+height:20px;}
+#b1{background-color:#1c4c22;
+color:#FFFFFF;
+height:25px;
+width:60px;
+border-style:hidden;
+
+
+}
+
+body{
+     background-image: url("Colorful21.png");
+ 
+}
+a{
+    color:#411551;
+    text-decoration: none;
+
+text-shadow: 12%;
+}
+a:hover{color:white;
+        background-color:#0c200f;
+}
+#b1:hover{background-image:url("btlog1.jpg");
+      cursor:pointer;
+     
+}
+
+#border{
+
+    background-color:white;
+        
+}
+#table1{
+    background-image: url("tab.jpg");
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 5, 2013 12:53:15 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="voting.CandidateReg" table="candidate_reg" catalog="online_voting">
+        <id name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="30" />
+        </property>
+        <property name="department" type="string">
+            <column name="department" length="35" />
+        </property>
+        <property name="party" type="string">
+            <column name="party" length="30" />
+        </property>
+        <property name="nominee" type="string">
+            <column name="nominee" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

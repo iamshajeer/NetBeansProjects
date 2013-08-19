@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2013 11:18:19 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ent.Booking" table="booking" catalog="ent">
+        <id name="token" type="java.lang.Integer">
+            <column name="token" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="date" type="string">
+            <column name="date" length="40" />
+        </property>
+        <property name="time" type="string">
+            <column name="time" length="40" />
+        </property>
+        <property name="doctor" type="string">
+            <column name="doctor" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

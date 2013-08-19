@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ent?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="ent/ScanTest.hbm.xml"/>
+    <mapping resource="ent/Medicine.hbm.xml"/>
+    <mapping resource="ent/Booking.hbm.xml"/>
+    <mapping resource="ent/BloodTest.hbm.xml"/>
+    <mapping resource="ent/Trans.hbm.xml"/>
+    <mapping resource="ent/Transaction.hbm.xml"/>
+    <mapping resource="ent/DoctorDiaganosis.hbm.xml"/>
+    <mapping resource="ent/XrayTest.hbm.xml"/>
+    <mapping resource="ent/Reg.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

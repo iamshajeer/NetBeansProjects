@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2013 11:18:19 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ent.DoctorDiaganosis" table="doctor_diaganosis" catalog="ent">
+        <id name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+            <generator class="identity" />
+        </id>
+        <property name="regId" type="java.lang.Integer">
+            <column name="reg_id" />
+        </property>
+        <property name="consultDate" type="string">
+            <column name="consult_date" length="20" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="75" />
+        </property>
+        <property name="blood" type="string">
+            <column name="blood" length="20" />
+        </property>
+        <property name="xray" type="string">
+            <column name="xray" length="25" />
+        </property>
+        <property name="scan" type="string">
+            <column name="scan" length="20" />
+        </property>
+        <property name="reconsultWeek" type="string">
+            <column name="reconsult_week" length="20" />
+        </property>
+        <property name="reconsultAdviceDate" type="string">
+            <column name="reconsult_advice_date" length="20" />
+        </property>
+        <property name="finalConsult" type="string">
+            <column name="final_consult" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

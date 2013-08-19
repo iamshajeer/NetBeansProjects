@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2013 2:58:44 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="db.Biddder" table="biddder" catalog="kseb1">
+        <id name="bidderid" type="java.lang.Integer">
+            <column name="bidderid" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="addtender" class="db.Addtender" fetch="select">
+            <column name="tenderid" />
+        </many-to-one>
+        <property name="bidprice" type="java.lang.Double">
+            <column name="bidprice" precision="22" scale="0" />
+        </property>
+        <property name="yofex" type="java.lang.Integer">
+            <column name="yofex" />
+        </property>
+        <property name="nameofbank" type="string">
+            <column name="nameofbank" length="20" />
+        </property>
+        <property name="acNo" type="string">
+            <column name="ac_no" length="20" />
+        </property>
+        <property name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+        </property>
+    </class>
+</hibernate-mapping>

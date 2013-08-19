@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="online_voting"/>
+  <table-filter match-name="candidate_reg"/>
+  <table-filter match-name="party"/>
+  <table-filter match-name="voter_reg"/>
+</hibernate-reverse-engineering>

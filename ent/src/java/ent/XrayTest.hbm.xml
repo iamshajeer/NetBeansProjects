@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2013 11:18:19 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ent.XrayTest" table="xray_test" catalog="ent">
+        <id name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+            <generator class="identity" />
+        </id>
+        <property name="regId" type="java.lang.Integer">
+            <column name="reg_id" />
+        </property>
+        <property name="testDate" type="string">
+            <column name="test_date" length="25" />
+        </property>
+        <property name="remark1" type="string">
+            <column name="remark1" length="35" />
+        </property>
+        <property name="remark2" type="string">
+            <column name="remark2" length="36" />
+        </property>
+        <property name="remark3" type="string">
+            <column name="remark3" length="35" />
+        </property>
+        <property name="remark4" type="string">
+            <column name="remark4" length="35" />
+        </property>
+        <property name="remark5" type="string">
+            <column name="remark5" length="35" />
+        </property>
+        <property name="opinion" type="string">
+            <column name="opinion" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

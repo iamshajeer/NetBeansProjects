@@ -1,0 +1,38 @@
+/* 
+    Document   : newstyle
+    Created on : Mar 2, 2013, 7:42:33 PM
+    Author     : Shajeer
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+.textbox{
+	
+	width:35ex;
+	height:3ex;
+		}
+	.submit{
+		width:17ex;
+		border:none;
+		background-color:#030;
+		height:4ex;
+		cursor:pointer;
+		color:#fff
+		}
+		.submit:hover{background-color:#095500;
+	
+		}
+	.outertable{
+		background-color:#030;
+		color:#FFF;
+		}
+		.innertable{
+			background-color:#FFF;
+			border-color:#009;
+			border:inset;
+			
+			color:#000;
+		}

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2013 11:18:19 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ent.ScanTest" table="scan_test" catalog="ent">
+        <id name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+            <generator class="identity" />
+        </id>
+        <property name="regId" type="string">
+            <column name="reg_id" length="20" />
+        </property>
+        <property name="scanDate" type="string">
+            <column name="scan_date" length="25" />
+        </property>
+        <property name="scanName" type="string">
+            <column name="scan_name" length="30" />
+        </property>
+        <property name="remark1" type="string">
+            <column name="remark1" length="30" />
+        </property>
+        <property name="remark2" type="string">
+            <column name="remark2" length="30" />
+        </property>
+        <property name="remark3" type="string">
+            <column name="remark3" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

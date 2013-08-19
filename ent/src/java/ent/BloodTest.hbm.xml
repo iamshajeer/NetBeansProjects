@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 2, 2013 11:18:19 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="ent.BloodTest" table="blood_test" catalog="ent">
+        <id name="siNo" type="java.lang.Integer">
+            <column name="si_no" />
+            <generator class="identity" />
+        </id>
+        <property name="regid" type="string">
+            <column name="regid" length="20" />
+        </property>
+        <property name="testDate" type="string">
+            <column name="test_date" length="20" />
+        </property>
+        <property name="hemoglobin" type="string">
+            <column name="hemoglobin" length="30" />
+        </property>
+        <property name="tlc" type="string">
+            <column name="tlc" length="20" />
+        </property>
+        <property name="neutrofill" type="string">
+            <column name="neutrofill" length="20" />
+        </property>
+        <property name="lymphocytes" type="string">
+            <column name="lymphocytes" length="20" />
+        </property>
+        <property name="monocytes" type="string">
+            <column name="monocytes" length="20" />
+        </property>
+        <property name="basophils" type="string">
+            <column name="basophils" length="20" />
+        </property>
+        <property name="othercount" type="string">
+            <column name="othercount" length="20" />
+        </property>
+        <property name="totalRbc" type="string">
+            <column name="total_rbc" length="20" />
+        </property>
+        <property name="platlets" type="string">
+            <column name="platlets" length="20" />
+        </property>
+        <property name="bloodGroup" type="string">
+            <column name="blood_group" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>
